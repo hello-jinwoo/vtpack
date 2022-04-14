@@ -437,7 +437,7 @@ def deit_dge_s124_tiny_patch16_256_with_naive(pretrained=False, **kwargs):
                                         model.embed_dim, 
                                         mode='naive', 
                                         n_extra_tokens=1,
-                                        img_size=224)
+                                        img_size=img_size)
 
     return model
 
