@@ -456,7 +456,7 @@ def deit_dge_s124_tiny_patch16_256_with_aaud(pretrained=False, **kwargs):
                                        model.embed_dim, 
                                        mode='aaud',
                                        n_extra_tokens=1,
-                                       image_size=256)
+                                       img_size=256)
 
     return model
 
