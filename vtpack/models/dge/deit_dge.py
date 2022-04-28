@@ -93,8 +93,8 @@ def get_aaud_for_patch(pos, encoding_dim=192):
     m = torch.arange(encoding_dim // 4, dtype=float)[None, :] + 1 # degrees for fourier series 
     x_a_m = x_coeff * ((torch.sin(m * x_theta_2) - torch.sin(m * x_theta_1)) / m)
     x_b_m = x_coeff * ((torch.cos(m * x_theta_1) - torch.cos(m * x_theta_2)) / m)
-    y_a_m = x_coeff * ((torch.sin(m * y_theta_2) - torch.sin(m * y_theta_1)) / m)
-    y_b_m = x_coeff * ((torch.sin(m * y_theta_1) - torch.sin(m * y_theta_2)) / m)
+    y_a_m = y_coeff * ((torch.sin(m * y_theta_2) - torch.sin(m * y_theta_1)) / m)
+    y_b_m = y_coeff * ((torch.sin(m * y_theta_1) - torch.sin(m * y_theta_2)) / m)
 
     ae = torch.cat([x_a_m, x_b_m, y_a_m, y_b_m], dim=-1)
 
